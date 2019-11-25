@@ -12,7 +12,9 @@ class ResourceList extends React.Component {
 
     this.setState({ resource: responce.data });
   }
-
+  //componentDidUpdate is invoked everytime the state is updated
+  // takes previous Props as argument and if they are not same then new fetch is made,
+  //othervise we enter to infinite cycle
   async componentDidUpdate(prevProps) {
     if (prevProps.resource !== this.props.resource) {
       const responce = await axios.get(
