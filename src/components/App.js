@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import RecourseList from "./ResourceList";
 import ResourceList from "./ResourceList";
 
 const App = () => {
